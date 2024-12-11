@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    AreaOfTraingle{
+        text-align: none;
+        margin :100px;
+    }
+    .capitalizeField{
+        text-transform: capitalize;
+    }
+</style>
+
+</head>
+<body style="background-color:light gray;" onload="onPageLoad()">
+    <h3>Caliculate Area of Traingle</h3>
+ <div>
+    <div class="areaOfTraingle">
+        <label>base</label>
+         <input id = "baseField" type ="text"><br><br>
+        <label>height</label>
+        <input id = "heightField" type = "text"><br><br>
+        <button id = "submitOnId" onclick= "traingleArea()">Caliculate</button><br>
+        <p id="areaValue"></p>
+    </div>
+    
+        
+</body>
+<script>
+function traingleArea() { 
+    var base = document.getElementById("baseField").value;
+    var height= document.getElementById("heightField").value;
+    var area = 0.5*base*height;
+    document.getElementById("areaValue").innerHTML= "Area = " +area;
+}
+
+
+</script>
+</html>

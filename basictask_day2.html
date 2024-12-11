@@ -1,0 +1,206 @@
+<!DOCTYPE>
+<html>
+
+<head>
+        
+    <style>
+        header {
+            background-color: lightpink;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: inline-block;
+            color: blue;
+            /* text-align: center;*/
+            padding: 15px 18px;
+            text-decoration: none;
+        }
+
+        .section1 {
+            background-color: cadetblue;
+        }
+
+        .image {
+            float: right;
+            background-color: none;
+            width: 30%;
+            height: 30%;
+        }
+
+        li a:hover {
+            background-color: lightblue;
+        }
+
+        #save {
+            background-color: blue;
+            float: right;
+        }
+
+        #cancel {
+            background-color: red;
+            float: right;
+        }
+
+        .content {
+            background-color: white;
+            height: 80%;
+            width: 100%;
+
+            .left-content {
+
+                border: 1px solid lightgray;
+                float: left;
+                width: 47%;
+                height: 100%;
+
+                h2 {
+                    text-align: center;
+                    text-decoration-line: underline;
+                    text-decoration-color: coral;
+                    text-transform: capitalize;
+                    text-decoration-style: solid;
+                    color: greenyellow;
+                }
+
+                p {
+                    font-size: large;
+                    text-indent: 100px;
+                    text-align: justify;
+                    letter-spacing: 2px;
+                }
+            }
+
+            .right-content {
+
+                border: 1px solid lightgray;
+                width: 48%;
+                float: right;
+                height: 100%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .footer-actions {
+            float: right;
+            width: 80%;
+            text-align: right;
+        }
+
+        .footer-map {
+            float: left;
+            width: 20%;
+        }
+
+        footer {
+            margin-top: 20px;
+            background: cadetblue;
+            overflow: auto;
+            padding-right: 20px;
+
+            img {
+                padding-top: 15px;
+                padding-left: 10px;
+            }
+
+            form {
+                margin-top: 20px;
+
+                #save-btn {
+                    background-color: blue;
+                    height: 25px;
+                    width: 90px;
+                }
+
+                #cancel-btn {
+                    background-color: red;
+                    height: 25px;
+                    width: 90px;
+                }
+
+            }
+        }
+    </style>
+
+<body>
+    <header>
+
+        <div class="section1">
+            <div class="home-icon-section">
+
+                <img src="home_icon.png" alt="home button" height="30px" width="35px"
+                    style="float:left; cursor: pointer; position:absolute;top: 15px;left: 20px;" />
+            </div>
+            <ul>
+
+                <li><a href="https//:www.google.com/" target="_blank">About Us</a></li>
+                <li><a href="https//:www.google.com/" target="_blank">Careers</a></li>
+                <li><a href="https//:www.gmail.com/" target="_blank">Contact Us</a></li>
+                <li><a href="http//:www.gmail.com/" target="_blank">Register Now</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="content">
+        <div class="left-content">
+            <h2> Apple logo</h2>
+            <p style="line-height: none;"><b>Steve Jobs </b>thought the original logo was too old-fashioned and
+                difficult to print on a smaller
+                scale. He
+                hired Rob Janoff, an <sub>experienced logo</sub> designer, to rebrand the company.</p>
+            <p>Jobs wanted a <mark> logo</mark> would represent modern computer design’s importance and blend in with
+                the brand
+                name<span style="color: crimson;font-weight: bold;"> “Apple.” </span> The result was an image of a
+                two-dimensional apple colored with a spectrum of rainbow
+                colors. That new design underscored the company’s Apple II computer – the world’s first colored-display
+                computer.</p>
+            <p>
+            <blockquote style="font-weight: bold;font-size: 130%; text-decoration-line: underline;">The bitten
+                <b><i><mark> Applelogo</mark></i></b> was <bdo dir="rtl">designed to distinguish it from a cherry</bdo>
+                since apples and
+                cherries often look alike.
+            </blockquote>
+            </p>
+        </div>
+        <div class="right-content">
+            <!--<p>APPLE logo</p>-->
+            <a href="https//:www.apple.com/" target="_blank">
+                <img src="/apple logo.png" width="400px" />
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-map">
+            <a href="https://maps.app.goo.gl/B8JVWtR7zCuWuAKo7" target="_blank">
+                <img src="/location map.jpg" alt="Location map" width="30px" />
+            </a>
+        </div>
+        <div class="footer-actions">
+            <form>
+                <input type="button" value="Save" id="save-btn" />
+                <input type="button" value="Cancel" id="cancel-btn" />
+
+            </form>
+        </div>
+    </footer>
+
+
+
+</body>
+</head>
+
+</html>

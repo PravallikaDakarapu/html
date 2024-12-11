@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Text Capitalization</h3>
+        <label>Capitalize </label>
+        <input id="capitalizeField" type = "text"><br><br>
+        <button id = "submitOnId" onclick= "capitalizeFirstLetter()">Submit</button><br>
+        <p id = "capField"></p>
+    </div>
+</body>
+<script>
+    function capitalizeFirstLetter(){
+        debugger;
+        var a = document.getElementById("capitalizeField").value;
+        var myarray = a.split("");
+        var cap = myarray[0].toUpperCase()+ myarray.slice(1);
+        var newString = cap.replace(/,/g, "+");
+        document.getElementById("capField").innerHTML= newString;
+    }
+</script>
+</html>

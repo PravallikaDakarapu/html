@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Number to Array</h3>
+        <label>Number</label>
+        <input id = "numberField" type=" text"><br><br>
+        <button id  = "submitOnId" onclick= "numToArray()">Submit</button><br>
+     </div>
+     <p id ="convertToArray"></p>
+    
+</body>
+<script>
+function numToArray(){
+        var num = document.getElementById("numberField").value;
+       var arrayElement = num.toString().split(""); 
+        document.getElementById("convertToArray").innerHTML = "Array : " + arrayElement;
+    }
+</script>
+</html>

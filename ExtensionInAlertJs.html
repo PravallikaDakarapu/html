@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Extension In Alert</h3>
+    <label>Extension</label>
+    <input id = "fileExtension" type = "file"><br><br>
+    <button id = "submitOnId" onclick= "clickFileExtension()">Check Extension</button><br>
+   <!-- <p id = "checkExtension"></p>-->
+</body>
+<script>
+    function clickFileExtension(){
+var   fileName = document.getElementById("fileExtension").value; 
+var   extension = fileName.split('.').pop(); 
+//document.getElementById("checkExtension").innerHTML = "File Extension : " + extension; 
+alert(extension);
+    }
+</script>
+</html>

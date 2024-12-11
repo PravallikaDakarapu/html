@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: boarder-box;
+        }
+
+        input[type=text] {
+            width: 150px;
+            height: 20px;
+        }
+
+        input[type=date] {
+            width: 153px;
+            height: 22px;
+        }
+
+        input[type=tel] {
+            width: 150px;
+            height: 20px;
+        }
+
+        input[type=file] {
+            width: 150px;
+            height: 22px;
+        }
+
+        select {
+            width: 158px;
+            height: 26px;
+        }
+
+        /* input[type=text], */
+        /* select {
+            width: 150px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            resize: vertical;
+
+        }
+
+        input[type=date] {
+            width: 150px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            resize: vertical;
+        }
+
+        input[type=tel] {
+            width: 150px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            resize: vertical;
+        }
+
+        input[type=file] {
+            width: 150px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            resize: vertical;
+        } */
+
+        input[type=submit] {
+            background-color: green;
+            color: white;
+            padding: 12px 12px;
+            border: 1px solid;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+
+
+        /* label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        } */
+
+        .Eform {
+            /* text-align: auto;
+            border-radius: 2px;
+
+            padding: 20px;
+            width: 600px;
+            margin-left: 500px;
+            margin-right: 50px; */
+            width: 30%;
+            margin: auto;
+        }
+
+        #formDetails {
+            width: 30%;
+            margin: auto;
+
+            display: none;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .col1 {
+            float: left;
+            width: 50%;
+        }
+
+        .col2 {
+            float: left;
+            width: 50%;
+        }
+
+        #formDetailsWithoutCss {
+            width: 30%;
+            margin: auto;
+            .row {
+                min-height: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: bisque;" onload="onPageLoad()">
+    <div class="Eform">
+        <h1 style=" text-align: center;">Employee Form</h1>
+        <form name="employee-form11" onsubmit="onSubmit(); return false"></form>
+        <div class="row">
+            <div class="col1">
+                <label>Employee ID</label>
+            </div>
+            <div class="col2">
+                <input id="employeeId" type="text"><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Name</label>
+            </div>
+            <div class="col2">
+                <input id="employeeName" type="text"><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Date Of Birth</label>
+            </div>
+            <div class="col2">
+                <input id="employeeDOB" type="date"><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Date Of Joining</label>
+            </div>
+            <div class="col2">
+                <input id="employeeDOJ" type="date"><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Gender</label>
+            </div>
+            <div class="col2">
+                <select id="employeeGender">
+                    <option value="">Select</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Others">Others</option>
+                </select><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Contact Number</label>
+            </div>
+            <div class="col2">
+                <input id="employeeContactNo" type="tel" placeholder="123-456-789"><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Blood Group</label>
+            </div>
+            <div class="col2">
+                <select id="employeeBloodGroup">
+                    <option value="">Select</option>
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="O+">O+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O-">O-</option>
+                </select><br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label>Resume</label>
+            </div>
+            <div class="col2">
+                <input id="employeeResume" type="file"><br><br>
+            </div>
+        </div>
+        <!--<div>
+                <input id = "submitButton" type="submit" value="Submit">
+              </div>-->
+        <div style="text-align:right;">
+            <input id="submitOnId" type="submit" onclick="onSubmit()">
+        </div>
+        </form>
+    </div>
+    <div id="formDetails">
+        <h2 style="text-align: center;">Employee Details</h2>
+        <div class="row">
+            <div class="col1"><label>Employee Id</label></div>
+            <div class="col2">
+                <label id="employeeIdField"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Name</label></div>
+            <div class="col2">
+                <label id="employeeNameField"></label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col1"><label>Date Of Birth</label></div>
+            <div class="col2">
+                <label id="employeeDOBField"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Date Of Joining</label></div>
+            <div class="col2">
+                <label id="employeeDOJField"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Gender</label></div>
+            <div class="col2">
+                <label id="employeeGenderField"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Contact Number</label></div>
+            <div class="col2">
+                <label id="employeeContactNoField"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Blood Group</label></div>
+            <div class="col2">
+                <label id="employeeBloodGroupField"></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Resume</label> </div>
+            <div class="col2">
+                <label id="employeeResumeField"></label>
+            </div>
+        </div>
+    </div>
+
+    <div id="formDetailsWithoutCss" />
+</body>
+<script>
+    function onPageLoad() {
+        document.getElementById("formDetails").style.visibility = 'hidden';
+    }
+
+    function onSubmit() {
+        var a = document.getElementById("employeeId").value;
+        var b = document.getElementById("employeeName").value;
+        var c = document.getElementById("employeeDOB").value;
+        var d = document.getElementById("employeeDOJ").value;
+        var e = document.getElementById("employeeGender").value;
+        var f = document.getElementById("employeeContactNo").value;
+        var g = document.getElementById("employeeBloodGroup").value;
+        var h = document.getElementById("employeeResume").value;
+
+       document.getElementById("formDetailsWithoutCss").innerHTML +=
+            `<h2 style="text-align: center;">Employee Details</h2>
+        <div class="row">
+            <div class="col1"><label>Employee Id</label></div>
+            <div class="col2">
+                <label id="employeeIdField">${a}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Name</label></div>
+            <div class="col2">
+                <label id="employeeNameField">${b}</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col1"><label>Date Of Birth</label></div>
+            <div class="col2">
+                <label id="employeeDOBField">${c}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Date Of Joining</label></div>
+            <div class="col2">
+                <label id="employeeDOJField">${d}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Gender</label></div>
+            <div class="col2">
+                <label id="employeeGenderField">${e}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Contact Number</label></div>
+            <div class="col2">
+                <label id="employeeContactNoField">${f}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Blood Group</label></div>
+            <div class="col2">
+                <label id="employeeBloodGroupField">${g}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1"><label>Resume</label> </div>
+            <div class="col2">
+                <label id="employeeResumeField">${h}</label>
+            </div>
+        </div>
+        `
+
+        document.getElementById("employeeIdField").innerHTML = a;
+        document.getElementById("employeeNameField").innerHTML = b;
+        document.getElementById("employeeDOBField").innerHTML = c;
+        document.getElementById("employeeDOJField").innerHTML = d;
+        document.getElementById("employeeGenderField").innerHTML = e;
+        document.getElementById("employeeContactNoField").innerHTML = f;
+        document.getElementById("employeeBloodGroupField").innerHTML = g;
+        document.getElementById("employeeResumeField").innerHTML = h;
+        document.getElementById("formDetails").style.visibility = 'visible';
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            text-align: none;
+            margin : 100px;
+
+            #tdr1 {
+            width: 180px;
+        }
+        }
+
+       //* #employeeId {
+
+            max-width: 200px;
+        }
+
+        #employeeName {
+
+            max-width: 200px;
+        }
+
+        #employeeDOB {
+
+            max-width: 200px;
+        }
+
+        #employeeGender {
+            max-width: 200px;
+        }*//
+       
+        
+    </style>
+</head>
+
+<body style="background-color: bisque;">
+    <h1 style=" text-align: center;">Employee Form</h1>
+   <form name="employee-form11" onsubmit="onSubmit(); return false">
+        <table>
+            <tr>
+                <td id="tdr1">
+                    <label>Employee ID</label> 
+                </td>
+                <td>
+                    <input id="employeeId1" type="text"><br><br> 
+                </td>
+            </tr>
+
+            <tr>
+                <td id="tdr1"><label>Name</label></td>
+                <td><input id="employeeName1" type="text"><br> <br></td>
+            </tr>
+            <tr>
+                <td id="tdr1"><label>Date Of Birth</label></td>
+                <td><input id="employeeDateOfBirth1" type="date"><br> <br></td>
+            </tr>
+            <tr>
+                <td id="tdr1"><label>Date Of Joining</label></td>
+                <td><input id="employeeDateOfJoining1" type="date"><br> <br></td>
+            </tr>
+           
+            <tr>
+                <td id="tdr1"><label>Gender</label></td>
+                <td><select id="employeeGender1">
+                    <option value="none">None</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="others">Others</option>
+                    </select><br><br></td>
+            </tr>
+            <tr>
+                <td id="tdr1"><label>Contact Number</label></td>
+                <td><input id="employeeContactNumber1" type="tel" placeholder="123-456-789"><br> <br></td>
+            </tr>
+            <tr>
+                <td id="tdr1"><label>Blood Group</label></td>
+                <td><select id="employeeBloodGroup1">
+                    <option value="none">None</option>
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="AB+">AB+</option>
+                    <option value="O+">O+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O-">O-</option>
+                </select><br><br></td>
+            </tr>
+            <tr>
+                <td id="tdr1"><label>Resume</label></td>
+                <td><input id="employeeResume1" type="file"><br> <br></td>
+            </tr>
+            <tr>
+                <td id="tdr1"><label></label></td>
+                <td><button type="submit" id="submitOnId">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    <form>
+        <table>
+    <tr>
+        <td id="tdr1"><label>Employee ID</label></td>
+    <td><p id="employeeIdField"></p></td>
+    </tr>
+    <tr>
+        <td id="tdr1"><label>Name</label></td>
+    <td><p id="employeeNameField"></p></td>
+    </tr>
+    <tr>
+        <td id="tdr1"><label>Date Of Birth</label></td>
+    <td><p id="employeeDOBField"></p></td>
+    </tr>
+    <tr>
+        <td id="tdr1"><label>Date Of Joining</label></td>
+    <td><p id="employeeDOJField"></p></td>
+    </tr>
+    <tr>
+        <td id="tdr1"><label>Gender</label></td>
+    <td><p id="employeeGenderField"></p></td>
+    </tr>
+    <tr>
+        <td id="tdr1"><label>Contact Number</label></td>
+    <td><p id="employeeContactNoField"></p></td>
+    </tr>
+    <tr>
+        <td id="tdr1"><label>Blood Group</label></td>
+    <td><p id="employeeBloodGroupField"></p></td>
+    </tr>
+    <tr>
+        <td id="tdr1"><label>Resume</label></td>
+    <td><p id="employeeResumeField"></p></td>
+    </tr>
+  </table>
+    </form>
+</body>
+<script>
+    function onSubmit() {
+        var a = document.getElementById("employeeId1").value;
+        var b = document.getElementById("employeeName1").value;
+        var c = document.getElementById("employeeDateOfBirth1").value;
+        var d = document.getElementById("employeeDateOfJoining1").value;
+        var e = document.getElementById("employeeGender1").value;
+        var f = document.getElementById("employeeContactNumber1").value;
+        var g = document.getElementById("employeeBloodGroup1").value;
+        var h = document.getElementById("employeeResume1").value;
+        document.getElementById("employeeIdField").innerHTML = a;
+        document.getElementById("employeeNameField").innerHTML = b;
+        document.getElementById("employeeDOBField").innerHTML = c;
+        document.getElementById("employeeDOJField").innerHTML = d;
+        document.getElementById("employeeGenderField").innerHTML = e;
+        document.getElementById("employeeContactNoField").innerHTML = f;
+        document.getElementById("employeeBloodGroupField").innerHTML = g;
+        document.getElementById("employeeResumeField").innerHTML = h;
+    }
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <p id = "newYearDays"></p>
+</body>
+<script>
+var currentday = new Date();
+var newYear = new Date(currentday.getFullYear(), 0, 1);
+if (currentday.getMonth()==0 && currentday.getDate()>1) 
+{
+    newYear.setFullYear(newYear.getFullYear()+1); 
+}  
+
+var one_day=1000*60*60*24;
+
+var  noOfDaysLeft = Math.ceil((newYear.getTime()-currentday.getTime())/(one_day));
+document.getElementById("newYearDays").innerHTML = noOfDaysLeft  + " -  " + "Days Left For Newyear";
+</script>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "nextYear"></p>
+</body>
+<script>
+   // var now  = new Date();
+   // var oneYear = new Date;
+
+</script>
+</html>

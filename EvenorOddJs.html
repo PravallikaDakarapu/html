@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Check the Number is Even or Odd </h2>
+    <label>Even or Odd</label>
+    <input id ="EvenorOddField" type = "number"><br><br>
+    <button id  = "submitOnId" onclick= "findEvenorOdd()">Submit</button><br>
+    <p id ="even" ></p>
+    <p id="odd"></p>
+</body>
+<script>
+    function findEvenorOdd(){
+        debugger;
+    var num = parseInt(document.getElementById("EvenorOddField").value);
+    if( num %2 == 0){
+        
+        document.getElementById("even").innerHTML = num + " -is a even number";
+    }
+    else{
+        document.getElementById("odd").innerHTML = num + "-is a odd number";
+    }
+}
+</script>
+</html>

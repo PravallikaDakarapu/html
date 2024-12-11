@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Date Picker</h3>
+    <label> Select Date</label>
+    <input id ="datePickerField" type ="date"><br><br>
+    <button id="submitOnId" onclick="selectDate()" >Submit</button>
+    <p id = "datepick" ></p>
+</body>
+<script>
+function selectDate(){
+    var d = document.getElementById("datePickerField").value;
+document.getElementById("datepick").innerHTML="Date : " +d;
+}
+</script>
+</html>
